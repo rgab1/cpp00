@@ -2,3 +2,5 @@
 *.o
 *.out
 megaphone
+phonebook
+.aider*
