@@ -1,15 +1,20 @@
 NAME = phonebook 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -MMD -std=c++98
+CXX_FLAGS = -Wall -Werror -Wextra -std=c++98
+CPP_FLAGS = -MMD
 INCLUDE = -I .
 
-SRC = contact.cpp main.cpp
+SRC_ROOT = Contact Phonebook main
+
+SRC = $(addsuffix .cpp, $(SRC_ROOT))
 
 OBJ = $(SRC:.cpp=.o)
 
 DEPENDENCIES = $(OBJ:.o=.d)
 
 all : $(NAME)
+
+-include $(DEPENDENCIES)
 
 $(NAME) : $(OBJ)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) $(OBJ) -o $(NAME)
@@ -27,5 +32,3 @@ fclean : clean
 re : fclean all
 
 .PHONY = all re clean fclean
-
--include $(DEPENDENCIES)

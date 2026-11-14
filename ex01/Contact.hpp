@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grivault <grivault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 02:47:24 by grivault          #+#    #+#             */
-/*   Updated: 2026/11/14 03:26:35 by grivault         ###   ########.fr       */
+/*   Updated: 2026/11/14 22:08:47 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,26 @@ class Contact
 	private:
 		std::string _firstName;
 		std::string _lastName;
-		std::string	_nickname;
-		int			_index;
+		std::string	_nickName;
+		std::string	_phoneNumber;
+		std::string	_darkestSecret;
 	public:
-		Contact(std::string firstName, std::string lastName);
+		Contact();
 		~Contact();
-		void	printNickname();
-		void	setNickname(std::string nickname);
+
+		void		setFirstName(const std::string str);
+		void		setLastName(const std::string str);
+		void		setNickName(const std::string str);
+		void		setPhoneNumber(const std::string str);
+		void		setDarkestSecret(const std::string str);
+
+		std::string	getFirstName();
+		std::string	getLastName();
+		std::string	getNickName();
+		std::string	getPhoneNumber();
+		std::string	getDarkestSecret();
+
+		void		displayContact();
 };
 
 #endif
