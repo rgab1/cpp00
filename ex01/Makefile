@@ -1,7 +1,7 @@
 NAME = phonebook 
 CXX = c++
-CXX_FLAGS = -Wall -Werror -Wextra -std=c++98
-CPP_FLAGS = -MMD
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CPPFLAGS = -MMD
 INCLUDE = -I .
 
 SRC_ROOT = Contact Phonebook main
