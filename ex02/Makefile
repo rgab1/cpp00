@@ -1,9 +1,9 @@
-NAME = phonebook 
+NAME = account_manager 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -MMD -std=c++98
 INCLUDE = -I .
 
-SRC = megaphone.cpp
+SRC = Account.cpp tests.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
