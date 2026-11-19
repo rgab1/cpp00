@@ -6,12 +6,13 @@
 /*   By: grivault <grivault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 19:48:05 by grivault          #+#    #+#             */
-/*   Updated: 2026/11/15 00:20:53 by grivault         ###   ########.fr       */
+/*   Updated: 2026/11/19 05:16:22 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <Phonebook.hpp>
 #include <iomanip>
+#include <cstdlib>
 
 Phonebook::Phonebook()
 {
@@ -101,7 +102,7 @@ void	Phonebook::searchContact()
 		std::cout << "No contact saved." << std::endl;
 		return ;
 	}
-	for (size_t i = 0; i < this->_count; i++) {
+	for (int i = 0; i < this->_count; i++) {
 		std::cout << "|" << std::setw(10) << i << "|"
 				  << std::setw(10) << this->_formatColumn(this->_contacts[i].getFirstName()) << "|"
 				  << std::setw(10) << this->_formatColumn(this->_contacts[i].getLastName()) << "|"

@@ -25,7 +25,6 @@ fclean : clean
 
 re : fclean all
 
-.PHONY = all re clean fclean
-
 -include $(DEPENDENCIES)
 
+.PHONY: all re clean fclean

@@ -6,13 +6,14 @@
 /*   By: grivault <grivault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 01:52:17 by grivault          #+#    #+#             */
-/*   Updated: 2026/11/14 02:20:56 by grivault         ###   ########.fr       */
+/*   Updated: 2026/11/19 05:19:38 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <ostream>
 #include <cstddef>
+#include <cctype>
 #include <iostream>
 
 int	main(int ac, char **av)
